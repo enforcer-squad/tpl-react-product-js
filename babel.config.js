@@ -4,14 +4,8 @@ const babelConfig = {
       '@babel/preset-env',
       {
         targets: 'chrome>=49',
-        // useBuiltIns: 'usage',
-        // corejs: {
-        //   version: '3.32',
-        //   proposals: true, // 使用尚在“提议”阶段特性的 polyfill
-        // },
       },
     ],
-    '@babel/preset-typescript',
     [
       '@babel/preset-react',
       {

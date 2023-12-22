@@ -10,7 +10,7 @@ const baseConfig = {
   mode: isProd ? 'production' : 'development',
   devtool: isProd ? false : 'source-map',
   entry: {
-    index: [resolve('src/index.ts')],
+    index: [resolve('src/index.js')],
   },
   output: {
     filename: '[name].js',
@@ -19,7 +19,7 @@ const baseConfig = {
     clean: true,
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+    extensions: ['.js', '.jsx', '.json'],
     alias: {
       '@': resolve('src'),
     },
@@ -27,7 +27,7 @@ const baseConfig = {
   module: {
     rules: [
       {
-        test: /\.[t|j]s[x]?$/,
+        test: /\.js[x]?$/,
         include: [resolve('src')],
         use: [
           {

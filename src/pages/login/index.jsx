@@ -1,4 +1,5 @@
 import { useLogin } from '@/services/userService';
+import { intl } from '@/utils/index';
 
 const test = {
   name: 'txdoctor1',
@@ -7,7 +8,7 @@ const test = {
 
 const Index = () => {
   const { mutate } = useLogin();
-  return <button onClick={() => mutate(test)}>login</button>;
+  return <button onClick={() => mutate(test)}>{intl('登录')}</button>;
 };
 
 export default Index;
