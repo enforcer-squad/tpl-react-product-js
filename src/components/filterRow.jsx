@@ -1,11 +1,11 @@
 import { memo } from 'react';
 import { Radio } from 'antd';
 import appModel, { filters } from '@/store/app';
-import { useUSS } from '@enforcer-squad/uss';
+import { useModel } from '@enforcer-squad/rex';
 
 const FilterRow = () => {
   console.log('FilterRow render');
-  const { filter, toggleFilter } = useUSS(appModel);
+  const { filter, toggleFilter } = useModel(appModel);
 
   const changeHandler = e => {
     const ret = e.target.value;

@@ -1,5 +1,5 @@
 import appModel from '@/store/app';
-import { useUSS } from '@enforcer-squad/uss';
+import { useModel } from '@enforcer-squad/rex';
 import memoize from 'fast-memoize';
 
 const selector = memoize(
@@ -25,7 +25,7 @@ const selector = memoize(
 );
 
 export const useTodos = () => {
-  const { todos, filter } = useUSS(appModel);
+  const { todos, filter } = useModel(appModel);
 
   return selector(todos, filter);
 };

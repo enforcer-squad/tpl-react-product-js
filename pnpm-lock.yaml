@@ -5,9 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@enforcer-squad/uss':
-    specifier: ^1.0.8
-    version: 1.0.8(react-dom@18.2.0)(react-router-dom@6.21.0)(react@18.2.0)
+  '@enforcer-squad/rex':
+    specifier: ^0.1.5
+    version: 0.1.5(react@18.2.0)
   antd:
     specifier: ^4.24.15
     version: 4.24.15(react-dom@18.2.0)(react@18.2.0)
@@ -2263,17 +2263,14 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: true
 
-  /@enforcer-squad/uss@1.0.8(react-dom@18.2.0)(react-router-dom@6.21.0)(react@18.2.0):
-    resolution: {integrity: sha512-SjNZADE2Ty0IVRViNlhEkVbbcKgeL0ADV64+jzjwe+h5uT4CpHkx4l25Y+ICJ/OX9Ny8E14Y6S8PJyR0xJb7sQ==}
+  /@enforcer-squad/rex@0.1.5(react@18.2.0):
+    resolution: {integrity: sha512-73hw0faadjXyKfYG8OHTqW+hKtdyznlE8Y4By3ay0R1P0xUjTvOjxtVnXNDrdcBynKFWmCLtj+NHJylOaCVFLw==}
+    engines: {node: '>=16'}
     requiresBuild: true
     peerDependencies:
-      react: ^18.2.0
-      react-dom: ^18.2.0
-      react-router-dom: ^6.21.0
+      react: ^18.0.0
     dependencies:
       react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      react-router-dom: 6.21.0(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
   /@eslint-community/eslint-utils@4.4.0(eslint@8.0.1):

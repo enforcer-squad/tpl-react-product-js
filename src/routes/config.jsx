@@ -6,10 +6,10 @@ const Layout = lazy(() => import('@/pages/layout/index'));
 const Page1 = lazy(() => import('@/pages/page1/index'));
 const Page2 = lazy(() => import('@/pages/page2/index'));
 
-const routes = auth => [
+const routes = role => [
   {
     path: '/',
-    element: auth.role ? <Layout /> : <Navigate to="/login" />,
+    element: role ? <Layout /> : <Navigate to="/login" />,
     children: [
       { path: '/', element: <Navigate to="/page1" /> },
       { path: '/page1', element: <Page1 /> },
@@ -26,7 +26,7 @@ const routes = auth => [
   },
   {
     path: '/login',
-    element: auth.role ? <Navigate to="/" /> : <Login />,
+    element: role ? <Navigate to="/" /> : <Login />,
   },
 ];
 

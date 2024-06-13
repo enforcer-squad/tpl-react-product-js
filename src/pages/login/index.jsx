@@ -1,5 +1,6 @@
-import { useLogin } from '@/services/userService';
+import { useModel } from '@enforcer-squad/rex';
 import { intl } from '@/utils/index';
+import userModel from '@/store/user';
 
 const test = {
   name: 'txdoctor1',
@@ -7,8 +8,8 @@ const test = {
 };
 
 const Index = () => {
-  const { mutate } = useLogin();
-  return <button onClick={() => mutate(test)}>{intl('登录')}</button>;
+  const { doLogin } = useModel(userModel);
+  return <button onClick={() => doLogin(test)}>{intl('登录')}</button>;
 };
 
 export default Index;

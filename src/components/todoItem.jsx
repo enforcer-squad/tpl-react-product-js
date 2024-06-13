@@ -1,12 +1,12 @@
 import { memo } from 'react';
 import { Checkbox } from 'antd';
 import appModel from '@/store/app';
-import { useUSS } from '@enforcer-squad/uss';
+import { useModel } from '@enforcer-squad/rex';
 
 const TodoItem = ({ todo }) => {
   console.log('TodoItem render', todo);
 
-  const { updateTodo, removeTodo } = useUSS(appModel);
+  const { updateTodo, removeTodo } = useModel(appModel);
 
   const changeHandler = e => {
     updateTodo(todo.id, e.target.checked);

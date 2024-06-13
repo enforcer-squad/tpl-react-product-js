@@ -1,8 +1,8 @@
-import { uss, devtools } from '@enforcer-squad/uss';
+import { createModel, devtools } from '@enforcer-squad/rex';
 
 let defaultId = 1;
 
-const model = uss({
+const model = createModel({
   key: 'app',
   todos: [],
   filter: 'all',
@@ -25,7 +25,7 @@ const model = uss({
     model.filter = filter;
   },
 });
-devtools(model);
+devtools(model, { name: 'app' });
 
 export const filters = ['all', 'completed'];
 

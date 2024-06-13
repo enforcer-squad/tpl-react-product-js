@@ -22,7 +22,7 @@ client.interceptors.response.use(
   res => {
     // 根据情况做统一的错误处理，或后处理如隐藏loading
     // 把后端返回的完整数据抛出去
-    return res.data;
+    return res.data?.data;
   },
   err =>
     // err.response.status 500情况
